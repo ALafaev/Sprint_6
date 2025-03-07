@@ -41,10 +41,8 @@ class WhoseScooterPage(BasePage):
     def click_to_metro_station_name(self, station_name):
         if station_name == 'Сокольники':
             self.click_to_element(WhoseScooterLocators.METRO_STATION_SOKOLNIKI)
-        elif station_name == 'Лубянка':
-            self.click_to_element(WhoseScooterLocators.METRO_STATION_LUBYANKA)
         else:
-            print('Выбранная станция не найдена')
+            self.click_to_element(WhoseScooterLocators.METRO_STATION_LUBYANKA)
 
     @allure.step('Заполняем поле "Станция метро"')
     def filling_the_metro_station_field(self, station_name):

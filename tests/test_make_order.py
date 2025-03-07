@@ -33,7 +33,7 @@ class TestMakeOrder:
         about_rent_page.check_confirm_order_button_is_clickable()
         about_rent_page.click_to_confirm_order_button()
 
-        assert about_rent_page.check_show_status_button_is_enabled() == True, "Сообщение об успешном оформлении заказа отсутствует"
+        assert about_rent_page.check_show_status_button_is_enabled(), "Сообщение об успешном оформлении заказа отсутствует"
 
     @allure.title('Проверка, что клик на кнопку "Заказать" внизу главной страницы ведет на форму "Для кого самокат?"')
     @allure.description('Ищем кнопку "Заказать" внизу главной страницы, жмем на нее, проверяем, что открылась страница "Для кого самокат?"')

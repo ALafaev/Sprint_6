@@ -11,7 +11,7 @@ class TestLogoYandexScooter:
         header_page.click_to_make_order_button()
         header_page.click_to_logo_scooter()
 
-        assert driver.current_url == URL.HOME_PAGE_URL, "Урл не совпадает с ожидаемым"
+        assert header_page.get_current_url() == URL.HOME_PAGE_URL, "Урл не совпадает с ожидаемым"
 
     @allure.title('Проверяем, что при нажатии на логотип «Яндекс» в новом окне через редирект откроется главная страница Дзена')
     @allure.description('Кликаем на логотип «Яндекс» в хедере, проверяем, что урл содержит ссылку на главную страницу Дзена')

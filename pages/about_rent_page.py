@@ -39,10 +39,8 @@ class AboutRentPage(BasePage):
     def click_to_rental_period_variant(self, period_name):
         if period_name == 'сутки':
             self.click_to_element(AboutRentLocators.RENTAL_PERIOD_ONE_DAY)
-        elif period_name == 'двое суток':
-            self.click_to_element(AboutRentLocators.RENTAL_PERIOD_TWO_DAYS)
         else:
-            print("Период не найден")
+            self.click_to_element(AboutRentLocators.RENTAL_PERIOD_TWO_DAYS)
 
     @allure.step('Заполняем поле "Срок аренды"')
     def filling_the_rental_period_field(self, period_name):
